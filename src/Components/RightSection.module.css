@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .ChatGPTVersion {
@@ -19,6 +21,7 @@
   color: var(--textcol);
   font-size: 25px;
   gap: 10px;
+  padding: 10px 0;
 }
 
 .ChatGPTVersion svg {
@@ -32,6 +35,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 0; /* Prevents flex overflow */
 }
 
 .messages {
@@ -41,6 +45,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-height: 0; /* Prevents flex overflow */
 }
 
 .message {
@@ -48,6 +53,7 @@
   gap: 15px;
   padding: 20px;
   border-radius: 10px;
+  word-break: break-word;
 }
 
 .userMessage {
@@ -72,6 +78,7 @@
   text-align: center;
   color: var(--textcol);
   margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .s1 h1 {
@@ -112,6 +119,9 @@
 
 .bottomSection {
   padding: 20px 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .messagebar {
@@ -199,5 +209,125 @@
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .RightSection {
+    padding: 0 10px;
+  }
+
+  .ChatGPTVersion {
+    font-size: 20px;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .s1 h1 {
+    font-size: 24px;
+  }
+
+  .s2 {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .message {
+    padding: 15px;
+  }
+
+  .messageContent p {
+    font-size: 14px;
+  }
+
+  .suggestioncard h2 {
+    font-size: 16px;
+  }
+
+  .suggestioncard p {
+    font-size: 12px;
+  }
+
+  .bottomSection {
+    padding: 10px;
+  }
+
+  .messagebar {
+    padding: 10px;
+  }
+
+  .messagebar input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .RightSection {
+    padding: 0 5px;
+  }
+
+  .ChatGPTVersion {
+    font-size: 18px;
+  }
+
+  .s1 h1 {
+    font-size: 20px;
+  }
+
+  .message {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .messageContent p {
+    font-size: 13px;
+  }
+
+  .bottomSection p {
+    font-size: 11px;
+  }
+}
+
+/* Handle height on mobile devices */
+@media (max-height: 600px) {
+  .s1 {
+    margin-bottom: 20px;
+  }
+
+  .s1 h1 {
+    margin-top: 10px;
+  }
+
+  .s2 {
+    gap: 10px;
+  }
+
+  .suggestioncard {
+    padding: 10px;
+  }
+}
+
+/* Ensure proper display on very small devices */
+@media (max-width: 320px) {
+  .ChatGPTVersion {
+    font-size: 16px;
+  }
+
+  .s1 h1 {
+    font-size: 18px;
+  }
+
+  .suggestioncard {
+    padding: 8px;
+  }
+
+  .suggestioncard h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .suggestioncard p {
+    font-size: 11px;
   }
 } 
