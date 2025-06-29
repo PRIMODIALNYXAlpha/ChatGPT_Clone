@@ -1,4 +1,4 @@
-Here’s your `README.md` content rewritten cleanly **without the `#` markdown headings** and still organized for clarity:
+ 
 
 ---
 
@@ -235,12 +235,7 @@ Open source under the [MIT License](LICENSE)
 * Built using Next.js and React
 
 ---
-
-**Contact 📧**
-
-For questions or ideas, please open an issue in the repository.
-
----
+ 
 
 ⭐ Star this repository if you find it helpful!
 
